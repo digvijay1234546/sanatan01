@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sanatan</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="preload" as="image" href="https://digvijay1234546.github.io/Sanatan/media/pic/page.png">
+	<script src="https://kit.fontawesome.com/b316a50621.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	/*main css file*/
+:root {
+  --first-color:#ff8900;
+  --sec-color: #8b1a00;
+  --window-color:#cca461;
+  --butten-color:#8b1a00;
+}
+
+*{
+	box-sizing: boder;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* body */
+body{
+	width: 100vw;
+	height: 100vh;
+}
+i{
+	color: var( --butten-color);
+}
+/*background-vactor*/
+#background-vactor{
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	z-index: 0;
+	background-color: var(--first-color);
+}
+#background-vactor img{
+	height: 70vh;
+	z-index: 0;
+}
+#background-vactor .wave{
+	position: absolute;
+	border-radius: 50%;
+	animation-name: waves;
+  	animation-duration:10s;
+  	animation-iteration-count:infinite;
+  	animation-timing-function:ease-in-out;
+  	z-index: -1;
+  	box-shadow: inset 0px 0px 20px 9px var(--sec-color);
+}
+.wave:nth-child(1){
+	animation-delay: 1s;
+}
+.wave:nth-child(2){
+	animation-delay: 2s;
+}
+.wave:nth-child(3){
+	animation-delay: 3s;
+}
+.wave:nth-child(4){
+	animation-delay: 5s;
+}
+.wave:nth-child(5){
+	animation-delay: 6s;
+}
+.wave:nth-child(6){
+	animation-delay: 8s;
+}
+.wave:nth-child(7){
+	animation-delay: 9s;
+}
+.wave:nth-child(8){
+	animation-delay: 10s;
+}
+
+	@keyframes waves{
+	  from {
+	  	width: 0vw;
+	  	height: 0vh;
+	  	outline: 3px solid var(--sec-color);
+	  	opacity: 1;
+	  	box-shadow: in;
+	  }
+	  to {
+	  	width: 1200px;
+	  	height: 1200px;
+	  	outline: 1px solid var(--sec-color);
+	  	opacity: 0;
+	  }
+	}
+/*navbar */
+nav{
+	position: fixed;
+	bottom: 0px;
+	left: 35%;
+	display: grid;
+	place-items: center;
+	width: 35%;
+	height: auto;
+	grid-template-columns: repeat(5, 1fr);
+	font-size: x-large;
+	border-radius: 10px;
+	outline: 1px solid orangered;
+	z-index: 1000;
+	background-color: whitesmoke;
+}
+nav img{
+	display: grid;
+	place-items: center;
+	width: 60px;
+	height: 60px;
+	background-color: #8b1a00;
+	border-radius: 50%;
+}
+nav i{
+	border-radius: 50%;
+	padding: 15px;
+}
+
+/* home section content-area*/
+section{
+	position: relative;
+	display: grid;
+	justify-content: center;
+	grid-template-rows: repeat(6, 1fr);
+	width: 100vw;
+}
+section .content-area{
+	width: 60vw;
+	height: 400px;
+	background-image: url("./media/pic/page.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+	display: grid;
+	place-items: center;
+	font-size: x-large;
+	color: #8b1a00;
+}
+
+/*nevbar window*/
+.window {
+    display: none;
+ }
+ .home-section{
+	display: grid;
+}
+/*book section */
+.win-section{
+	position: relative;
+	width: 1000px;
+	margin: auto auto;
+	height: 1000px;
+	border-radius: 20px;
+	z-index: 2;
+	grid-template-rows: 25% auto;
+	place-items: center;
+	background-color: var(--window-color);
+
+}
+.win-section .top-area{
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid black;
+}
+.win-section .top-area i{
+	font-size: xxx-large;
+	background-color: var(--first-color);
+	padding: 40px;
+	border-radius: 50%;
+	grid-row-gap: 2px;
+}
+.win-section .bottem-area{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+/*window video section */
+.win-section .bottem-area .book-area{
+	width: 150px;
+	height: 200px;
+	margin: 20px;
+	background-image: url("./media/pic/BGC.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	box-shadow: 10px 10px #fdfdfd;
+
+}
+ .item {
+            cursor: pointer;
+        }
+.item-details {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: var(--first-color);
+    grid-template-columns: 300px auto;
+}
+.item-details #close-btn{
+	display: none;
+}
+.item-details aside{
+	width: 100%;
+	height: 100%;
+	background-color: var(--window-color);
+	display: grid;
+	grid-template-rows: 40% repeat(5, 1fr);
+	place-items: center;
+	position: relative;
+}
+.item-details aside #close-btn{
+	position: absolute;
+    right: -56px;
+	padding: 20px;
+	border-radius: 0px 50% 50% 0px;
+	background-color: white;
+	z-index: 10;
+}	
+.item-details aside .book-cover{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+.item-details aside .book-cover img{
+	width: 150px;
+	height: 200px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	box-shadow: 10px 10px #fdfdfd;
+}
+.item-details object{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.item-details button{
+	padding: 20px;
+	background-color: darkred;
+	padding: 10px 40px;
+	font-size: xx-large;
+	color: var(--first-color);;
+}
+
+
+/*main video section*/
+
+.video-area{
+	width: 300px;
+	height: 200px;
+	display: grid;
+	place-items: center;
+	grid-template-rows: auto 10%;
+}
+.video-area iframe{
+	border: 1px solid orangered;
+	width: 100%;
+	height: 95%;
+
+}
+
+/*chat-area */
+.chat-area{
+	width: 250px;
+	height: 250px;
+	background-image: url('./media/pic/chat1.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-size: large;
+	display: grid;
+	place-items: center;
+	color: white;
+}
+
+.person{
+	width: 200px;
+	height: 300px;
+	display: grid;
+	place-items: center;
+}
+.all-pages{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto;
+	place-items: center;
+	overflow-y: auto;
+	background-color: var(--first-color);
+}
+.all-pages .page{
+	width: 700px;
+	height: 1000px;
+	background-image: url('./media/pic/pic.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #8b1a00;
+	text-align: center;
+	display: grid;
+	grid-template-rows: 10% repeat(5, 1fr) ;
+	padding: 50px 20px;
+	font-size: large;
+	font-weight: bold;
+}
+.all-pages .page h4{
+	margin: 30px;
+}
+
+
+.settings{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	place-items: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+.settings .bg-music{
+	display: grid;
+	width: 70%;
+	height: auto;
+	background-color: var(--first-color);
+	border-radius: 20px;
+	grid-template-rows: repeat(2, 1fr);
+	place-items: center;
+	padding: 30px;
+	margin: 50px;
+}
+
+.audio-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: var(--window-color);
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      font-size: large;
+    }
+    
+    .active {
+      background-color: var(--butten-color);
+      color: #fff;
+    }
+.settings audio{
+	display: none;
+}
+.settings #volumecontroler{
+	display: grid;
+	width: 90%;
+	height: auto;
+	grid-template-columns: 10% 90%;
+	font-size: x-large;
+	place-items: center;
+	margin-top: 20px;
+}
+
+.settings input{
+	width: 100%;
+}
+.settings .theme{
+	display: grid;
+	width: 70%;
+	height: auto;
+	background-color: var(--first-color);
+	border-radius: 20px;
+	place-items: center;
+	padding: 30px;
+	margin: 50px;
+}
+.settings .theme .theme-item{
+	display: grid;
+	width: 100%;
+	height: 40px;
+	grid-template-columns: repeat(2, 1fr);
+	place-items: center;
+	background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    border: 2px solid var(--window-color);
+    border-radius: 5px;
+}
+.settings #dayButton{
+	background-color: var(--sec-color);
+	width: 100%;
+	height: 100%;
+	border: none;
+	color: white;
+	font-size: large;
+}
+.settings #nightButton{
+	background-color: var(--first-color);
+	width: 100%;
+	height: 100%;
+	border: none;
+	color: white;
+	font-size: x-large;
+}
+
+
+@media only screen and (max-width: 768px) {
+	/*background-vactor*/
+	#background-vactor img{
+	width: auto;
+	height: 50vh;
+	}
+	/*navbar */
+	nav{
+		width:100vw;
+		height: auto;
+		left: 0px;
+	}
+	/* home section content-area*/
+	section .content-area{
+		width: 100vw;
+	}
+	/*nevbar window*/
+	.win-section{
+		width: 100vw;
+		height: 100vh;
+	}
+	.win-section .bottem-area{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.item-details #close-btn{
+		display: block;
+	}
+	.item-details{
+		grid-template-columns: 0% 100%;
+	}
+	.all-pages .page{
+		width: 100vw;
+	}
+	.item-details aside{
+	width: 100vw;
+	min-height: 100vh;
+	}
+	.item-details object{
+		display: none;
+	}
+
+}
+
+</style>
+
+</head>
+<body>
+
+    <!-- background vactor -->
+    <div id="background-vactor">
+    	<img src="./media/pic/valmiki.png" alt="valmiki">
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    	<div class="wave"></div>
+    </div>
+    <!-- navbar -->
+	<nav>
+		<div><img class="button" src="./logo.png" alt="logo"></div>
+		<div><i class="button fa-solid fa-comments"></i></div>
+		<div><i class="button fa-solid fa-book"></i></div>
+		<div><i class="button fa-solid fa-photo-film"></i></div>
+		<div><i class="button fa-solid fa-gear"></i></div>
+	</nav>
+
+<!-- main home page -->
+	<section class="window home-section">
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+		<div class="content-area">
+			<h3>परित्राणाय साधूनाम् विनाशाय च दुष्कृताम्। <br>धर्मसंस्थापनार्थाय सम्भवामि युगे-युगे॥</h3>
+		</div>
+	</section>
+
+<!-- window comments section -->
+	<div class="window win-section ">
+		<div class="top-area">
+			<i class="button fa-solid fa-comments"></i>
+		</div>
+		<div class="bottem-area">
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+			<div class="chat-area item button">
+				<h3>Mahrshi Dadhichi <br>महर्षि दधीचि</h3>
+			</div>
+		</div>
+	</div>
+
+<!-- window book section -->
+	<div class="window win-section ">
+		<div class="top-area">
+			<i class="button fa-solid fa-book"></i>
+		</div>
+		<div class="bottem-area">
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+				<div class="book-area item button"></div>
+		</div>
+	</div>
+
+
+<!-- window video section -->
+	<div class="window win-section ">
+		<div class="top-area">
+			<i class="button fa-solid fa-photo-film"></i>
+		</div>
+		<div class="bottem-area">
+				
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				<figure class="video-area item">
+				   <iframe ></iframe> 
+				  <figcaption> Trulli, Puglia, Italy.</figcaption>
+				</figure>
+				
+		</div>
+	</div>
+	<div class="window win-section ">
+		<div class="top-area">
+			<i class="button fa-solid fa-gear"></i>
+		</div>
+		<div class="settings">
+				<div class="bg-music">
+					<div>
+						<audio id="audio1" class ="audio" src="./media/audio/om.mp3" controls autoplay loop></audio>
+					  <audio id="audio2" class ="audio"src="./media/audio/om1.mp3" controls loop></audio>
+					  <audio id="audio3" class ="audio"src="./media/audio/om2.mp3" controls loop></audio>
+					  <audio id="audio4" class ="audio"src="./media/audio/om3.mp3" controls loop></audio>
+					  
+					  <button class="audio-button audio-btn" data-audio-id="audio1">Play Audio 1</button>
+					  <button class="audio-button audio-btn" data-audio-id="audio2">Play Audio 2</button>
+					  <button class="audio-button audio-btn" data-audio-id="audio3">Play Audio 3</button>
+					  <button class="audio-button audio-btn" data-audio-id="audio4">Play Audio 4</button>
+					  <button id="stop-all-button" class="audio-btn">Stop All</button>
+					</div>
+					<div id="volumecontroler">
+						<i class="fa-solid fa-volume-high"></i>
+						<input type="range" id="volumeSlider" min="0" max="100" value="50">
+					</div>
+				</div>
+				<div class="theme">
+					<div class="theme-item">
+						<button id="dayButton">Day</button>
+  					<button id="nightButton">Night</button>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+
+
+<!-- chat section -->
+	<section>
+		<!-- 1 -->
+		<div class="item-details" id="box"> 
+        <aside>
+        	<i class="fa-solid fa-arrow-up-right-from-square" id="close-btn"></i>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        		<p>लोक कल्याण के लिये देह-त्याग करने वालों में महर्षि दधीचि का नाम बड़े ही सम्मान के साथ लिया जाता है। यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। अन्य पुराण के अनुसार यह शुक्राचार्य के पुत्र थे। महर्षि दधीचि तपस्या और पवित्रता की प्रतिमूर्ति थे। भगवान शिव के प्रति अटूट भक्ति और वैराग्य में इनकी जन्म से ही निष्ठा थी।</p>
+        		<h4>कथा</h4>
+        		<p>कहा जाता है कि एक बार इन्द्रलोक पर 'वृत्रासुर’ नामक राक्षस ने अधिकार कर लिया तथा इन्द्र सहित देवताओं को देवलोक से निकाल दिया। सभी देवता अपनी व्यथा लेकर ब्रह्मा, विष्णु व महेश के पास गए, लेकिन कोई भी उनकी समस्या का निदान न कर सका। बाद में ब्रह्मा जी ने देवताओं को एक उपाय बताया कि पृथ्वी लोक में 'दधीचि' नाम के एक महर्षि रहते हैं। यदि वे अपनी अस्थियों का दान कर दें तो उन अस्थियों से एक वज्र बनाया जाये। उस वज्र से वृत्रासुर मारा जा सकता है, क्योंकि वृत्रासुर को किसी भी अस्त्र-शस्त्र से नहीं मारा जा सकता। इसीलिए ऐसे प्राणी के अस्थियों से ही उसे मारा जा सकता है,जो कभी भी गुस्से के पकड़ में न आया हो। वो केवल महर्षि ’दधीचि’ थे ।</p>
+        	</div>
+        	<div class="page">
+        		<h4>इन्द्र का संकोच</h4>
+        		<p>देवराज इन्द्र महर्षि दधीचि के पास जाना नहीं चाहते थे, क्योंकि इन्द्र ने एक बार दधीचि का अपमान किया था, जिसके कारण वे दधीचि के पास जाने से कतरा रहे थे। माना जाता है कि ब्रह्म विद्या का ज्ञान पूरे विश्व में केवल महर्षि दधीचि को ही था। महर्षि मात्र विशिष्ट व्यक्ति को ही इस विद्या का ज्ञान देना चाहते थे, लेकिन इन्द्र ब्रह्म विद्या प्राप्त करने के परम इच्छुक थे। दधीचि की दृष्टि में इन्द्र इस विद्या के पात्र नहीं थे। इसलिए उन्होंने इन्द्र को इस विद्या को देने से मना कर दिया। दधीचि के इंकार करने पर इन्द्र ने उन्हें किसी अन्य को भी यह विद्या देने को मना कर दिया और कहा कि- "यदि आपने ऐसा किया तो मैं आपका सिर धड़ से अलग कर दूँगा"। महर्षि ने कहा कि- "यदि उन्हें कोई योग्य व्यक्ति मिलेगा तो वे अवश्य ही ब्रह्म विद्या उसे प्रदान करेंगे।" कुछ समय बाद इन्द्रलोक से ही अश्विनीकुमार महर्षि दधीचि के पास ब्रह्म विद्या लेने पहुँचे। दधीचि को अश्विनीकुमार ब्रह्म विद्या पाने के योग्य लगे। उन्होंने अश्विनीकुमारों को इन्द्र द्वारा कही गई बातें बताईं। तब अश्विनीकुमारों ने महर्षि दधीचि के अश्व का सिर लगाकर ब्रह्म विद्या प्राप्त कर ली। इन्द्र को जब यह जानकारी मिली तो वह पृथ्वी लोक में आये और अपनी घोषणा के अनुसार महर्षि दधीचि का सिर धड़ से अलग कर दिया। अश्विनीकुमारों ने महर्षि के असली सिर को फिर से लगा दिया। इन्द्र ने अश्विनीकुमारों को इन्द्रलोक से निकाल दिया। यही कारण था कि अब इन्द्र महर्षि दधीचि के पास उनकी अस्थियों का दान माँगने के लिए आना नहीं चाहते थे। वे इस कार्य के लिए बड़ा ही संकोच महसूस कर रहे थे।</p>
+        		<h4>दधीचि द्वारा अस्थियों का दान</h4>
+        		<p>देवलोक पर वृत्रासुर राक्षस के अत्याचार दिन-प्रतिदिन बढ़ते ही जा रहे थे। वह देवताओं को भांति-भांति से परेशान कर रहा था। अन्ततः देवराज इन्द्र को इन्द्रलोक की रक्षा व देवताओं की भलाई के लिए और अपने सिंहासन को बचाने के लिए देवताओं सहित महर्षि दधीचि की शरण में जाना ही पड़ा। महर्षि दधीचि ने इन्द्र को पूरा सम्मान दिया तथा आश्रम आने का कारण पूछा। इन्द्र ने महर्षि को अपनी व्यथा सुनाई तो दधीचि ने कहा कि- "मैं देवलोक की रक्षा के लिए क्या कर सकता हूँ।" देवताओं ने उन्हें ब्रह्मा, विष्णु व महेश की कहीं हुई बातें बताईं तथा उनकी अस्थियों का दान माँगा। महर्षि दधीचि ने बिना किसी हिचकिचाहट के अपनी अस्थियों का दान देना स्वीकार कर लिया। उन्होंने समाधी लगाई और अपनी देह त्याग दी। उस समय उनकी पत्नी आश्रम में नहीं थी। अब देवताओं के समक्ष ये समस्या आई कि महर्षि दधीचि के शरीर के माँस को कौन उतारे। इस कार्य के ध्यान में आते ही सभी देवता सहम गए। तब इन्द्र ने कामधेनु गाय को बुलाया और उसे महर्षि के शरीर से मांस उतारने को कहा। कामधेनु ने अपनी जीभ से चाट-चाटकर महर्षि के शरीर का माँस उतार दिया। अब केवल अस्थियों का पिंजर रह गया था।</p>
+        		<h4>गभस्तिनी की जिद</h4>
+        		<p>महर्षि दधीचि ने तो अपनी देह देवताओ की भलाई के लिए त्याग दी, लेकिन जब उनकी पत्नी 'गभस्तिनी' वापस आश्रम में आई तो अपने पति की देह को देखकर विलाप करने लगी तथा सती होने की जिद करने लगी। तब देवताओ ने उन्हें बहुत मना किया, क्योंकि वह गर्भवती थी। देवताओं ने उन्हें अपने वंश के लिए सती न होने की सलाह दी। लेकिन गभस्तिनी नहीं मानी। तब सभी ने उन्हें अपने गर्भ को देवताओं को सौंपने का निवेदन किया। इस पर गभस्तिनी राजी हो गई और अपना गर्भ देवताओं को सौंपकर स्वयं सती हो गई। देवताओं ने गभस्तिनी के गर्भ को बचाने के लिए पीपल को उसका लालन-पालन करने का दायित्व सौंपा। कुछ समय बाद वह गर्भ पलकर शिशु हुआ तो पीपल द्वारा पालन पोषण करने के कारण उसका नाम 'पिप्पलाद' रखा गया। इसी कारण दधीचि के वंशज 'दाधीच' कहलाते हैं।</p>
+        	</div>
+        </div>
+    </div>
+    <!-- 2 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+    <!-- 3 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+    <!-- 4 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+    <!-- 5 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+    <!-- 6 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+ 
+ <!-- 7 -->
+    <div class="item-details">
+        <aside>
+        	<div class="person">
+        		<img src="./media/pic/Maharshi Dadhichi.jpg">
+        	</div>
+        	<h3>Maharshi Dadhichi</h3>
+        	<h4>कुल: ब्राह्मण</h4>
+        	<h4>पिता: अथर्वा</h4>
+        	<h4>विवाह: गभस्तिनी</h4>
+        	<h4>संतान: पिप्पलाद</h4>
+        	<button class="item">Close</button>
+        </aside>
+        <div class="all-pages">
+        	<div class="page">
+        		<h3>महर्षि दधीचि</h3>
+        		<p>महर्षि दधीचि वैदिक ऋषि थे। इनके जन्म के संबंध में अनेक कथाएँ हैं। यास्क के मतानुसार ये अथर्व के पुत्र हैं। पुराणों में इनकी माता का नाम 'शांति' मिलता है। इनकी तपस्या के संबंध में भी अनेक कथाएँ प्रचलित हैं। इन्हीं की हड्डियों से बने वज्र से इंद्र ने वृत्रासुर का संहार किया था। कुछ लोग आधुनिक मिश्रिखतीर्थ (बिहार के सिवान जिले) को इनकी तपोभूमि बताते हैं। इनका प्राचीन नाम 'दध्यंच' कहा जाता है।</p>
+
+        		<p>यास्क के मतानुसार दधीचि की माता 'चित्ति' और पिता 'अथर्वा' थे, इसीलिए इनका नाम 'दधीचि' हुआ था। किसी पुराण के अनुसार यह कर्दम ऋषि की कन्या 'शांति' के गर्भ से उत्पन्न अथर्वा के पुत्र थे। दधीचि प्राचीन काल के परम तपस्वी और ख्यातिप्राप्त महर्षि थे। उनकी पत्नी का नाम 'गभस्तिनी' था। महर्षि दधीचि वेद शास्त्रों आदि के पूर्ण ज्ञाता और स्वभाव के बड़े ही दयालु थे। अहंकार तो उन्हें छू तक नहीं पाया था। वे सदा दूसरों का हित करना अपना परम धर्म समझते थे। उनके व्यवहार से उस वन के पशु-पक्षी तक संतुष्ट थे, जहाँ वे रहते थे। गंगा के तट पर ही उनका आश्रम था। जो भी अतिथि महर्षि दधीचि के आश्रम पर आता, स्वयं महर्षि तथा उनकी पत्नी अतिथि की पूर्ण श्रद्धा भाव से सेवा करते थे। यूँ तो 'भारतीय इतिहास' में कई दानी हुए हैं, किंतु मानव कल्याण के लिए अपनी अस्थियों का दान करने वाले मात्र महर्षि दधीचि ही थे। देवताओं के मुख से यह जानकर की मात्र दधीचि की अस्थियों से निर्मित वज्र द्वारा ही असुरों का संहार किया जा सकता है, महर्षि दधीचि ने अपना शरीर त्याग कर अस्थियों का दान कर दिया।</p>
+        		<h4>परिचय</h4>
+        	</div>
+        </div>
+    </div>
+ 
+
+  </section>
+
+
+
+
+
+
+
+
+<!-- main books section -->
+	<section>
+		<div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///var/www/html/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+    <div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+    <div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+    <div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+		<div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+		<div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+    <div class="item-details">
+        <aside>
+        	<div class="book-cover">
+        		<img src="./media/pic/BGC.jpg">
+        	</div>
+        	<h3>book name</h3>
+        	<p> writer name</p>
+        	<details> book all information</details>
+        	<span>
+        		note
+        	</span>
+        	<button class="item">Close</button>
+        </aside>
+        <object data="file:///home/xdev/Documents/om%20project/media/book-pdf/Bhagavad-Gita-Hindi.pdf" title="description"></object> 
+
+    </div>
+
+
+
+<!-- main video section -->
+
+
+
+	</section>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".button");
+    const windows = document.querySelectorAll(".window");
+
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        windows.forEach((window, windowIndex) => {
+          if (windowIndex === index) {
+            window.style.display = "grid";
+          } else {
+            window.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".item");
+    const windows = document.querySelectorAll(".item-details");
+
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        windows.forEach((window, windowIndex) => {
+          if (windowIndex === index) {
+            window.style.display = "grid";
+          } else {
+            window.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+
+
+
+	// all settings js
+  // audio select js
+   	const audioButtons = document.querySelectorAll('.audio-button');
+    const audioElements = document.querySelectorAll('audio');
+    const stopAllButton = document.getElementById('stop-all-button');
+    let currentAudio = null;
+
+    audioButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const audioId = button.getAttribute('data-audio-id');
+        const audioElement = document.getElementById(audioId);
+
+        if (currentAudio && currentAudio !== audioElement) {
+          currentAudio.pause();
+        }
+
+        if (audioElement.paused) {
+          audioElement.play();
+          currentAudio = audioElement;
+        } else {
+          audioElement.pause();
+          currentAudio = null;
+        }
+      });
+    });
+
+    audioElements.forEach(audio => {
+      audio.addEventListener('ended', () => {
+        currentAudio = null;
+      });
+    });
+
+    stopAllButton.addEventListener('click', () => {
+      audioElements.forEach(audio => {
+        audio.pause();
+      });
+      currentAudio = null;
+    });
+
+
+
+    const buttons = document.querySelectorAll('.audio-btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+        });
+        button.classList.add('active');
+      });
+    });
+
+
+    const audio1 = document.getElementById("audio1");
+    const audio2 = document.getElementById("audio2");
+    const audio3 = document.getElementById("audio3");
+    const audio4 = document.getElementById("audio4");
+    const volumeSlider = document.getElementById("volumeSlider");
+    
+    // Set initial volume and update UI
+    audio1.volume = volumeSlider.value / 100;
+    audio2.volume = volumeSlider.value / 100;
+    audio3.volume = volumeSlider.value / 100;
+    audio4.volume = volumeSlider.value / 100;
+    
+    // Update volume when slider value changes
+    volumeSlider.addEventListener("input", () => {
+      const newVolume = volumeSlider.value / 100;
+      audio1.volume = newVolume;
+      audio2.volume = newVolume;
+      audio3.volume = newVolume;
+      audio4.volume = newVolume;
+    });
+
+
+
+
+    // theme section
+    const dayButton = document.getElementById("dayButton");
+		const nightButton = document.getElementById("nightButton");
+		var r = document.querySelector(':root');
+
+		dayButton.addEventListener("click", () => {
+		  r.style.setProperty("--first-color", "#ff8900");
+		  r.style.setProperty("--sec-color", "#8b1a00");
+		  r.style.setProperty("--butten-color", "#8b1a00");
+		});
+
+		nightButton.addEventListener("click", () => {
+		  r.style.setProperty("--first-color", "#8b1a00");
+		  r.style.setProperty("--sec-color", "#ff8900");
+		  r.style.setProperty("--butten-color", "#ff8900");
+		});
+
+		const toggleButton = document.getElementById("close-btn");
+		const box = document.getElementById("box");
+
+		toggleButton.addEventListener("click", () => {
+		  box.style.gridTemplateColumns = box.style.gridTemplateColumns === "0% 100%" ? "90% 0%" : "0% 100%";
+		});
+
+
+</script>
+</body> 
+</html>
